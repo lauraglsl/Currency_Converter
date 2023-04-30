@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="icon" type="image/png" href="img\logo.png">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="bg-slate-950 text-white ">
+    <header>
+        <nav class="container flex justify-between items-center">
+            <div class="w-20 py-5 font-bold  text-3xl">
+                <a href="#home">
+                    Currency<span class="text-orange-500 ml-2">Converter</span>
+                </a>
+            </div>
+            <div>
+                <ul class="hidden lg:flex items-center space-x-6">
+                    <li><a href="#home" class="hover:text-orange-500 ease-in duration-200">Home</a></li>
+                    <li><a href="#convertor" class="hover:text-orange-500 ease-in duration-200">Converter</a></li>
+                    <li><a href="#history" class="hover:text-orange-500 ease-in duration-200">History</a></li>
+                    <li><a href="#rates" class="hover:text-orange-500 ease-in duration-200">Exchange Rates</a></li>
+                    <li><button
+                            class="bg-orange-500 px-9 py-3 rounded-md font-bold hover:opacity-80 ease-in duration-200">Log
+                            In</button></li>
+                </ul>
+            </div>
+            <!-- Small screen -->
+            <div id="small" class="lg:hidden cursor-pointer z-50">
+                <ion-icon id="bar" class="text-3xl" name="menu"></ion-icon>
+            </div>
+            <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+                <ul class="h-full grid place-items-center py-20">
+                    <li><a id="homeLink" href="#home" class="hover:text-orange-500 ease-in duration-200">Home</a></li>
+                    <li><a id="homeLink" href="#convertor"
+                            class="hover:text-orange-500 ease-in duration-200">Converter</a></li>
+                    <li><a id="homeLink" href="#history" class="hover:text-orange-500 ease-in duration-200">History</a>
+                    </li>
+                    <li><a id="homeLink" href="#rates" class="hover:text-orange-500 ease-in duration-200">Exchange
+                            Rates</a>
+                    </li>
+                    <li><button class="btn hover:text-orange-500 ease-in duration-200">Log In</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="relative " id="landing_page">
+            <div
+                class="w-60 h-60 bg-orange-500 absolute top-0 -left-10 -z-10 blur-3xl opacity-80 overflow-hidden rounded-full">
+            </div>
+            <div
+                class="w-60 h-60 bg-fuchsia-900 absolute bottom-0 -right-10 -z-10 blur-3xl opacity-70 overflow-hidden rounded-full">
+            </div>
+            <div class="grid grid-cols-2 gap-30 m-10 px-20 pt-10 justify-between">
+                <div class="col-span-1 pl-6 align-middle ml-20 w-2/3 ">
+                    <h1 class="text-5xl font-bold mb-9 leading-snug ">Awesome App for currency convertor</h1>
+                    <h6>
+                        We understand that converting currency can be a hassle,
+                        which is why we've created an easy-to-use platform to help you quickly and securely convert your
+                        currency.
+                    </h6>
+                </div>
+                <div class="col-span-1 items-center w-22 mr-24 ">
+                    <img class="float-right ml-0" src="img\landing_image.png" alt="landing_image">
+                </div>
+            </div>
+        </section>
+        <section class="relative py-8" id="about">
+        <div class="flex flex-col items-center">
+            <div class=" text-3xl sm:text-4xl my-10 ">Our Tools</div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-5">
+                <div class="flex flex-col items-center border-2 rounded-md py-4 px-2">
+                    <ion-icon class="text-4xl sm:text-5xl text-white" name="sync"></ion-icon>
+                    <p class="text-xl sm:text-2xl font-bold mt-2 leading-snug bg-clip-text bg-gradient-to-r from-orange-700 to-fuchsia-800 text-transparent">Currency Converter</p>
+                </div>
+                <div class="flex flex-col items-center border-2 rounded-md py-4 px-2">
+                    <ion-icon class="text-4xl sm:text-5xl text-white" name="time"></ion-icon>
+                    <p class="text-xl sm:text-2xl font-bold mt-2 leading-snug bg-clip-text bg-gradient-to-r from-fuchsia-800 to-orange-500 text-transparent">History</p>
+                </div>
+                <div class="flex flex-col items-center border-2 rounded-md py-4 px-2">
+                    <ion-icon class="text-4xl sm:text-5xl text-white" name="clipboard"></ion-icon>
+                    <p class="text-xl sm:text-2xl font-bold mt-2 leading-snug bg-clip-text bg-gradient-to-r from-orange-700 to-fuchsia-800 text-transparent">Exchange Rates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        <section id="convertor">
+            <div>
+                <div
+                    class="w-60 h-60 bg-fuchsia-500 absolute left-10 -z-10 blur-3xl opacity-50 overflow-hidden rounded-full">
+                </div>
+                <div class="bg-white rounded-md mx-60 p-5 h-100 items-center my-60 sm:m-0 lg:mx-60">
+                    <div class="p-2 mx-10 py-5 rounded-2xl justify-center  ">
+                        <div>
+                            <h1
+                                class="text-transparent font-extrabold text-2xl top-0 p-2 bg-clip-text bg-gradient-to-r from-fuchsia-800 to-orange-500">
+                                Currency converter</h1>
+                        </div>
+                        <div
+                            class="w-60 h-60 bg-orange-500 absolute left-10 -z-10 blur-3xl opacity-50 overflow-hidden rounded-full">
+                        </div>
+                        <div id="form" class="flex flex-grow text-black mx-20 pt-8 ">
+                            <div class="basis-1/2 m-2">
+                                <label class="block font-medium text-sm text-gray-700" for="to-select">From</label>
+                                <select id="from_currency" class="w-full border-2 h-10 rounded-md" id="to-select"
+                                    data-te-select-init>
+                                    <option value="1"></option>
+                                </select>
+                            </div>
+                            <div class="basis-1/2 m-2">
+                                <label class="block font-medium text-sm text-gray-700" for="to-select">Amount</label>
+                                <input id="amount" class="p-2 border-2 rounded-md h-10" type="number" placeholder="0"
+                                    value="0">
+                            </div>
+                            <div class=" pt-6">
+                                <div class=" flex items-center  basis-1/8 px-4 py-4 text-fuchsia-800 ">
+                                    <ion-icon name="swap"></ion-icon>
+                                </div>
+                            </div>
+                            <div class="basis-1/2 m-2">
+                                <label class="block font-medium text-sm text-gray-700" for="to-select">To</label>
+                                <select id="to_currency" class="w-full border-2 h-10 rounded-md" id="to-select"
+                                    data-te-select-init>
+                                    <option value="1"></option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex justify-end ">
+                            <button id="convert_btn"
+                                class="bg-fuchsia-700 p-2 rounded-xl right-0 mt-2 mr-5 btn hover:opacity-60 ease-in duration-200 ">
+                                Calculate
+                            </button>
+                        </div>
+                        <div class="flex justify-center">
+                            <div id="result_info"
+                                class="border-2 border-slate-900 opacity-0 w-80 rounded-md p-2 text-slate-900 mx-20 gap-2 pl-30">
+                                <div id="conversion" class=" text-2xl flex justify-start space-x-2">
+                                    <p id="amount_value">50 </p>
+                                    <p id="from">USD</p>
+                                    <p id="equal">:</p>
+                                    <div class=" flex justify-start space-x-2 pt-0">
+                                        <p id="result">70.85</p>
+                                        <p id="to">COP</p>
+
+                                    </div>
+                                </div>
+                                <div id="rate" class="text-gray-600 flex justify-start">
+                                    <p id="label_rate"> Conversion rate:</p>
+                                    <p id="rate_value" class="ml-2 mr-2">1.025</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="history">
+            <div
+                class="w-60 h-60 bg-fuchsia-500 absolute right-10 -z-10 blur-3xl opacity-50 overflow-hidden rounded-full">
+            </div>
+            <div
+                class="w-60 h-60 bg-orange-500 absolute right-10 -z-10 blur-3xl opacity-50 overflow-hidden rounded-full">
+            </div>
+            <div id="" class="bg-white m-10 p-5 rounded-md mx-60 sm:mx-0 lg:mx-60">
+                <div
+                    class="text-2xl pl-20 font-extrabold text-transparent py-6 bg-clip-text bg-gradient-to-r from-orange-500 to-slate-800">
+                    History</div>
+                
+                <div id="message_history" class="flex flex-col px-5 ">
+                    <div class=" text-black overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                            <div class="overflow-hidden">
+                                <table id="history_tb" class="min-w-full text-left text-sm font-light ml-20 mr-20">
+                                    <thead class="border-b font-medium dark:border-neutral-500">
+                                        <tr class=" ">
+                                            <th scope="col" class="px-6 py-4">Amount</th>
+                                            <th scope="col" class="px-6 py-4">From</th>
+                                            <th scope="col" class="px-6 py-4">To</th>
+                                            <th scope="col" class="px-6 py-4">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="body_table">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="rates">
+            <div class="bg-white m-10 p-5 rounded-md mx-60 sm:mx-0 lg:mx-60">
+                <div
+                    class="text-2xl pl-20 font-extrabold text-transparent top-0 py-8 bg-clip-text bg-gradient-to-r from-sky-950 to-cyan-300">
+                    Exchange rates</div>
+                <div
+                    class="w-60 h-60 bg-orange-500 absolute left-10 -z-10 blur-3xl opacity-50 overflow-hidden rounded-full">
+                </div>
+                <div class="text-black ml-20">Please select a base currency :</div>
+                <div class="flex flex-grow text-black mx-20 pt-8 justify-center ">
+                    <div class="basis-1/2 m-2">
+                        <label class="block font-medium text-sm text-gray-700" for="to-select">From</label>
+                        <select id="rate_base" class="w-full border-2 h-10 rounded-md" id="to-select"
+                            data-te-select-init>
+                            <option value="1"></option>
+                        </select>
+                    </div>
+                    <div class=" top-0 pt-4 ml-2">
+                        <button id="showRates_btn"
+                            class=" border-2 rounded-full items bg-cyan-950 text-2xl flex items-center basis-1/8 px-4 py-4 text-white">
+                            <ion-icon name="arrow-round-forward"></ion-icon>
+                        </button>
+                    </div>
+
+                </div>
+                <div id="test_rate" class="pt-6 mx-40">
+                    <div class=" text-black overflow-x-auto sm:-mx-6 lg:-mx-8">
+                        <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+                            <div class="overflow-hidden">
+                                <table class="min-w-full text-left text-sm font-light">
+                                    <thead class="border-b font-medium dark:border-neutral-500">
+                                        <tr class=" ">
+                                            <th scope="col" class="px-6 py-4">Currency</th>
+                                            <th scope="col" class="px-6 py-4">Rate</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="table_rate">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script>
+        //Small menu
+        const small = document.querySelector('#small')
+        const menu = document.querySelector('#menu')
+        const homeLink = document.querySelector('#homeLink')
+        const bar = document.querySelector('#bar')
+
+        small.addEventListener("click", () => {
+            menu.classList.toggle('hidden');
+            bar.classList.toggle()
+        })
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
